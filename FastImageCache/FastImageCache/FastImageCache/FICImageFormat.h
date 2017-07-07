@@ -62,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @see [FICImageCacheDelegate imageCache:shouldProcessAllFormatsInFamily:forEntity:]
  */
-@property (nonatomic, copy) NSString *family;
+@property (nonatomic, copy, nullable) NSString *family;
 
 /**
  The size, in points, of the images stored in the image table created by this format.
@@ -178,7 +178,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return An autoreleased instance of `FICImageFormat` or one of its subclasses, if any exist.
  */
-+ (instancetype)formatWithName:(NSString *)name family:(NSString *)family imageSize:(CGSize)imageSize style:(FICImageFormatStyle)style maximumCount:(NSInteger)maximumCount devices:(FICImageFormatDevices)devices protectionMode:(FICImageFormatProtectionMode)protectionMode;
++ (instancetype)formatWithName:(NSString *)name family:(nullable NSString *)family imageSize:(CGSize)imageSize style:(FICImageFormatStyle)style maximumCount:(NSInteger)maximumCount devices:(FICImageFormatDevices)devices protectionMode:(FICImageFormatProtectionMode)protectionMode;
 
 @end
 NS_ASSUME_NONNULL_END
