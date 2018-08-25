@@ -234,6 +234,9 @@ static NSString *const FICImageTableFormatKey = @"format";
 }
 
 - (void)dealloc {
+    if (_indexNumbers != NULL) {
+        CFRelease(_indexNumbers);
+    }
     if (_fileDescriptor >= 0) {
         close(_fileDescriptor);
     }
